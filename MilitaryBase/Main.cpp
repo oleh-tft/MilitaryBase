@@ -32,30 +32,24 @@ int main()
 
 	base.Print();
 
-	bus3->Leave();
+	if (bus3->Leave()) delete bus3;
 	base.Print();
-	delete bus3;
 
-	bus1->Leave();
+	if (bus1->Leave()) delete bus1;
 	base.Print();
-	delete bus1;
 
-	truck1->Leave();
+	if (truck1->Leave()) delete truck1;
 	base.Print();
-	delete truck1;
 
-	bus2->Leave();
+	if (bus2->Leave()) delete bus2;
 	base.Print();
-	delete bus2;
 
 	Vehicle* bus4 = new Bus(27, 30, 200.0, 1600.0);
 	bus4->Arrive();
 	base.Print();
 
-	bus4->Leave();
+	if (bus4->Leave()) delete bus4;
 	base.Print();
-	delete bus4;
 
 	delete truck2;
-	
 }
