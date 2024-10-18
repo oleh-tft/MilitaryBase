@@ -18,9 +18,24 @@ double Truck::GetMaxLoad() const
 
 void Truck::Arrive()
 {
+	Vehicle::Arrive();
+	Base::goods_on_base += load;
+	load = 0;
+
+	cout << "Truck arrived at the base." << endl << endl;
 }
 
 bool Truck::Leave()
 {
-	return false;
+	if (!Vehicle::Leave()) return false;
+
+	double emptySpace = max_load - load;
+	int toMove = emptySpace > Base::goods_on_base ? Base::goods_on_base : emptySpace;
+
+	load += toMove;
+	Base::goods_on_base -= toMove;
+
+	cout << "Truck left the base." << endl << endl;
+
+	return true;
 }

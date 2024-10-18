@@ -21,6 +21,8 @@ void Bus::Arrive()
 	Vehicle::Arrive();
 	Base::people_on_base += people;
 	people = 0;
+
+	cout << "Bus arrived at the base." << endl << endl;
 }
 
 bool Bus::Leave()
@@ -32,6 +34,8 @@ bool Bus::Leave()
 
 	people += toMove;
 	Base::people_on_base -= toMove;
+
+	cout << "Bus left the base." << endl << endl;
 
 	return true;
 }

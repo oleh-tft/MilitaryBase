@@ -28,19 +28,19 @@ bool Vehicle::Leave()
 
 	if (Base::people_on_base == 0)
 	{
-		cout << "No people on base!" << endl;
+		cout << "No people on base!" << endl << endl;
 		return false;
 	}
 
 	if (Base::vehicles_on_base == 0)
 	{
-		cout << "No vehicles on base!" << endl;
+		cout << "No vehicles on base!" << endl << endl;
 		return false;
 	}
 
 	if (Base::petrol_on_base < petrolRequired)
 	{
-		cout << "Not enough petrol on base!" << endl;
+		cout << "Not enough petrol on base!" << endl << endl;
 		return false;
 	}
 

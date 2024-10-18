@@ -13,7 +13,7 @@ public:
 	Vehicle(double petrol_amount, double tank_volume);
 	double GetTankVolume()const;
 	double GetPetrolAmount()const;
-	void Arrive();
-	bool Leave();
+	virtual void Arrive();
+	virtual bool Leave();
 };
 
